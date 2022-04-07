@@ -3,8 +3,6 @@
 #include <stdio.h>      /* printf() */
 #include <string.h>
 
-// #define MSGSIZE 100
-
 int main(int argc, char **argv) {
         int inbuf; //buffer
         int pid;
@@ -20,7 +18,7 @@ int main(int argc, char **argv) {
         //anggap prod
         case 0:         /* fork returns 0 ke proses anak */
                 // tulis data ke pipe, random angka 0 - 30
-                int msg1  = rand() % 30; // simbol \0 adalah end of string
+                int msg1  = rand() % 30; 
                 int msg2  = rand() % 30; 
                 /* tutup bagian input dari pipe */
                 close(fd[0]);
